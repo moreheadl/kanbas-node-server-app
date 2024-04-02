@@ -39,6 +39,14 @@ const Lab5 = (app) => {
         todos.push(newTodo);
         res.json(newTodo);
     });
+    app.get("/a5/todos/create", (req, res) => {
+        const newTodo = {
+          ...req.body,
+          id: new Date().getTime(),
+        };
+        todos.push(newTodo);
+        res.json(todos);
+    });
   
     app.delete("/a5/todos/:id", (req, res) => {
         const { id } = req.params;
