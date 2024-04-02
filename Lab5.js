@@ -44,8 +44,7 @@ const Lab5 = (app) => {
           ...req.body,
           id: new Date().getTime(),
         };
-        todos.push(newTodo);
-        res.json(todos);
+        res.json(newTodo);
     });
   
     app.delete("/a5/todos/:id", (req, res) => {
