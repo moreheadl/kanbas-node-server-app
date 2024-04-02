@@ -70,7 +70,7 @@ const Lab5 = (app) => {
         const todo = todos.find((t) => t.id === parseInt(id));
         res.json(todo);
     });
-    app.delete("/a5/todos/:id", (req, res) => {
+    app.get("/a5/todos/:id/delete", (req, res) => {
         const { id } = req.params;
         const todo = todos.find((t) => t.id === parseInt(id));
         todos.splice(todos.indexOf(todo), 1);
