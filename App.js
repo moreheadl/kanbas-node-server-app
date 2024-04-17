@@ -23,7 +23,7 @@ app.use(
 
 
 const sessionOptions = {
-    secret: process.env.SESSION_SECRET,
+    secret: "i-love-my-dog",
     resave: false,
     saveUninitialized: false,
   };
